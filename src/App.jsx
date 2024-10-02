@@ -15,8 +15,7 @@ function App() {
 
 
   useEffect(() => {
-    authService.getCurrentUser().then((userData)=>{
-      checking = userData
+    authService.getCurrentUser().then((userData)=>{    
       if(userData) {
         dispatch(login({userData}))
       }
@@ -32,11 +31,10 @@ function App() {
   return !loading ?  (
    <div>
     <Header/>
-    <main>
+    {/* <main> */}
       {/* <Outlet/> */}
-      {checking}
-    </main>
-    <Footer/>
+    {/* </main> */}
+    {/* <Footer/> */}
    </div>
   ) : null
 }
